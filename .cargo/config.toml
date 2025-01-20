@@ -1,0 +1,8 @@
+[build]
+target-dir = "target"
+
+[alias]
+client = "run --bin client"
+server = "run --bin server"
+test-client = "test --bin client"
+test-server = "test --bin server"

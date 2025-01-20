@@ -1,0 +1,825 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+  - repo: https://github.com/psf/black
+    rev: 21.9b0
+    hooks:
+      - id: black
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v0.910
+    hooks:
+      - id: mypy
+  - repo: https://github.com/pre-commit/mirrors-flake8
+    rev: v3.9.2
+    hooks:
+      - id: flake8
+  - repo: https://github.com/dnephin/pre-commit-golang
+    rev: v1.0.0
+    hooks:
+      - id: go-fmt
+      - id: go-vet
+  - repo: https://github.com/pre-commit/mirrors-eslint
+    rev: v7.32.0
+    hooks:
+      - id: eslint
+  - repo: https://github.com/pre-commit/mirrors-prettier
+    rev: v2.3.2
+    hooks:
+      - id: prettier
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.9.6
+    hooks:
+      - id: pylint
+  - repo: https://github.com/pre-commit/mirrors-bandit
+    rev: v1.7.0
+    hooks:
+      - id: bandit
+  - repo: https://github.com/pre-commit/mirrors-yamllint
+    rev: v1.26.1
+    hooks:
+      - id: yamllint
+  - repo: https://github.com/pre-commit/mirrors-rustfmt
+    rev: v1.4.37
+    hooks:
+      - id: rustfmt
+  - repo: https://github.com/pre-commit/mirrors-clippy
+    rev: v0.1.52
+    hooks:
+      - id: clippy
+  - repo: https://github.com/pre-commit/mirrors-shellcheck
+    rev: v0.7.2
+    hooks:
+      - id: shellcheck
+  - repo: https://github.com/pre-commit/mirrors-shfmt
+    rev: v3.3.1
+    hooks:
+      - id: shfmt
+  - repo: https://github.com/pre-commit/mirrors-hadolint
+    rev: v2.7.0
+    hooks:
+      - id: hadolint
+  - repo: https://github.com/pre-commit/mirrors-markdownlint
+    rev: v0.27.0
+    hooks:
+      - id: markdownlint
+  - repo: https://github.com/pre-commit/mirrors-jsonlint
+    rev: v1.6.3
+    hooks:
+      - id: jsonlint
+  - repo: https://github.com/pre-commit/mirrors-toml
+    rev: v0.10.2
+    hooks:
+      - id: toml
+  - repo: https://github.com/pre-commit/mirrors-xml
+    rev: v0.1.0
+    hooks:
+      - id: xml
+  - repo: https://github.com/pre-commit/mirrors-yapf
+    rev: v0.31.0
+    hooks:
+      - id: yapf
+  - repo: https://github.com/pre-commit/mirrors-isort
+    rev: v5.9.3
+    hooks:
+      - id: isort
+  - repo: https://github.com/pre-commit/mirrors-pyupgrade
+    rev: v2.29.1
+    hooks:
+      - id: pyupgrade
+  - repo: https://github.com/pre-commit/mirrors-pydocstyle
+    rev: v6.1.1
+    hooks:
+      - id: pydocstyle
+  - repo: https://github.com/pre-commit/mirrors-pyflakes
+    rev: v2.3.1
+    hooks:
+      - id: pyflakes
+  - repo: https://github.com/pre-commit/mirrors-pytest
+    rev: v6.2.5
+    hooks:
+      - id: pytest
+  - repo: https://github.com/pre-commit/mirrors-pytest-cov
+    rev: v2.12.1
+    hooks:
+      - id: pytest-cov
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock
+    rev: v3.6.1
+    hooks:
+      - id: pytest-mock
+  - repo: https://github.com/pre-commit/mirrors-pytest-xdist
+    rev: v2.4.0
+    hooks:
+      - id: pytest-xdist
+  - repo: https://github.com/pre-commit/mirrors-pytest-forked
+    rev: v1.3.0
+    hooks:
+      - id: pytest-forked
+  - repo: https://github.com/pre-commit/mirrors-pytest-randomly
+    rev: v3.8.0
+    hooks:
+      - id: pytest-randomly
+  - repo: https://github.com/pre-commit/mirrors-pytest-timeout
+    rev: v1.4.2
+    hooks:
+      - id: pytest-timeout
+  - repo: https://github.com/pre-commit/mirrors-pytest-xvfb
+    rev: v2.0.0
+    hooks:
+      - id: pytest-xvfb
+  - repo: https://github.com/pre-commit/mirrors-pytest-html
+    rev: v3.1.1
+    hooks:
+      - id: pytest-html
+  - repo: https://github.com/pre-commit/mirrors-pytest-metadata
+    rev: v1.11.0
+    hooks:
+      - id: pytest-metadata
+  - repo: https://github.com/pre-commit/mirrors-pytest-sugar
+    rev: v0.9.4
+    hooks:
+      - id: pytest-sugar
+  - repo: https://github.com/pre-commit/mirrors-pytest-qt
+    rev: v3.3.0
+    hooks:
+      - id: pytest-qt
+  - repo: https://github.com/pre-commit/mirrors-pytest-bdd
+    rev: v4.0.2
+    hooks:
+      - id: pytest-bdd
+  - repo: https://github.com/pre-commit/mirrors-pytest-django
+    rev: v4.4.0
+    hooks:
+      - id: pytest-django
+  - repo: https://github.com/pre-commit/mirrors-pytest-flask
+    rev: v1.2.0
+    hooks:
+      - id: pytest-flask
+  - repo: https://github.com/pre-commit/mirrors-pytest-tornado
+    rev: v0.8.0
+    hooks:
+      - id: pytest-tornado
+  - repo: https://github.com/pre-commit/mirrors-pytest-twisted
+    rev: v1.13.2
+    hooks:
+      - id: pytest-twisted
+  - repo: https://github.com/pre-commit/mirrors-pytest-asyncio
+    rev: v0.15.1
+    hooks:
+      - id: pytest-asyncio
+  - repo: https://github.com/pre-commit/mirrors-pytest-aiohttp
+    rev: v0.3.0
+    hooks:
+      - id: pytest-aiohttp
+  - repo: https://github.com/pre-commit/mirrors-pytest-celery
+    rev: v0.0.0
+    hooks:
+      - id: pytest-celery
+  - repo: https://github.com/pre-commit/mirrors-pytest-datadir
+    rev: v1.3.1
+    hooks:
+      - id: pytest-datadir
+  - repo: https://github.com/pre-commit/mirrors-pytest-factoryboy
+    rev: v2.0.3
+    hooks:
+      - id: pytest-factoryboy
+  - repo: https://github.com/pre-commit/mirrors-pytest-freezegun
+    rev: v0.4.2
+    hooks:
+      - id: pytest-freezegun
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-resources
+    rev: v1.0.0
+    hooks:
+      - id: pytest-mock-resources
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-server
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-server
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-redis
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-redis
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-ses
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-ses
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-s3
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-s3
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sqs
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sqs
+  - repo: https://github.com/pre-commit/mirrors-pytest-mock-sns
+    rev: v0.0.0
+    hooks:
+      - id: pytest-mock-sns
