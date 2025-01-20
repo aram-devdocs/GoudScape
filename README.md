@@ -20,11 +20,16 @@ A RuneScape-inspired MMORPG built with modern technologies.
 - Skills and progression
 - Multiplayer interaction
 
+## Project Structure
+
+- `apps/client`: Bevy-based front end client
+- `apps/server`: Tokio with Axum-based back end server
+- `libs/networking`: renet-based networking module
+- `libs/movement`: movement tracking module
+
 ## Getting Started
 
 ```bash
-
-
 # Build and run the client
 cargo run --bin client
 
