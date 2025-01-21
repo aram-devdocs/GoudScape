@@ -24,8 +24,6 @@ A RuneScape-inspired MMORPG built with modern technologies.
 
 - `apps/client`: Bevy-based front end client
 - `apps/server`: Tokio with Axum-based back end server
-- `libs/networking`: renet-based networking module
-- `libs/movement`: movement tracking module
 
 ## Getting Started
 

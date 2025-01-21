@@ -1,63 +1,51 @@
 use bevy::prelude::*;
-use networking::networking::{Networking, CubeMovement};
-use std::net::SocketAddr;
+
+#[derive(Component)]
+struct Position {
+    x: f32,
+    y: f32,
+}
+
+fn print_position_system(query: Query<&Position>) {
+    for position in &query {
+        println!("position: {} {}", position.x, position.y);
+    }
+}
+
+#[derive(Component)]
+struct Person;
+
+#[derive(Component)]
+struct Name(String);
+
+fn add_people(mut commands: Commands) {
+    commands.spawn((Person, Name("Elaina Proctor".to_string())));
+    commands.spawn((Person, Name("Renzo Hume".to_string())));
+    commands.spawn((Person, Name("Zayna Nieves".to_string())));
+}
+
+fn update_people(mut query: Query<&mut Name, With<Person>>) {
+    for mut name in &mut query {
+        if name.0 == "Elaina Proctor" {
+            name.0 = "Elaina Hume".to_string();
+            break; // We don't need to change any other names.
+        }
+    }
+}
+struct Entity(u64);
+
+fn greet_people(query: Query<&Name, With<Person>>) {
+    for name in &query {
+        println!("hello {}!", name.0);
+    }
+}
+fn hello_world() {
+    println!("hello world!");
+}
 
 fn main() {
-    App::build()
-        .add_plugins(DefaultPlugins)
-        .add_startup_system(setup.system())
-        .add_system(move_cube.system())
-        .add_system(send_cube_movement.system())
+    App::new()
+        .add_systems(Startup, add_people)
+        .add_systems(Update, (hello_world, (update_people, greet_people).chain()))
         .run();
-}
-
-struct Cube;
-struct NetworkResource {
-    networking: Networking,
-}
-
-fn setup(mut commands: Commands, mut materials: ResMut<Assets<ColorMaterial>>, mut meshes: ResMut<Assets<Mesh>>) {
-    commands.spawn_bundle(OrthographicCameraBundle::new_2d());
-    commands.spawn_bundle(SpriteBundle {
-        material: materials.add(Color::rgb(0.5, 0.5, 1.0).into()),
-        sprite: Sprite::new(Vec2::new(30.0, 30.0)),
-        ..Default::default()
-    })
-    .insert(Cube);
-
-    let server_addr = "127.0.0.1:3000".parse::<SocketAddr>().unwrap();
-    let networking = Networking::new(server_addr);
-    commands.insert_resource(NetworkResource { networking });
-}
-
-fn move_cube(mut query: Query<(&Cube, &mut Transform)>, keyboard_input: Res<Input<KeyCode>>) {
-    for (_cube, mut transform) in query.iter_mut() {
-        let mut direction = Vec3::ZERO;
-        if keyboard_input.pressed(KeyCode::Left) {
-            direction.x -= 1.0;
-        }
-        if keyboard_input.pressed(KeyCode::Right) {
-            direction.x += 1.0;
-        }
-        if keyboard_input.pressed(KeyCode::Up) {
-            direction.y += 1.0;
-        }
-        if keyboard_input.pressed(KeyCode::Down) {
-            direction.y -= 1.0;
-        }
-        transform.translation += direction * 2.0;
-    }
-}
-
-fn send_cube_movement(
-    query: Query<(&Cube, &Transform)>,
-    mut network_resource: ResMut<NetworkResource>,
-) {
-    for (_cube, transform) in query.iter() {
-        let movement = CubeMovement {
-            x: transform.translation.x,
-            y: transform.translation.y,
-        };
-        network_resource.networking.send_cube_movement(movement);
-    }
 }
